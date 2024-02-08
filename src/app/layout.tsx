@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import '../styles/globals.css';
+import RecoidContextProvider from "./recoilContextProvider";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>Practice DSA</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="icon" href="/dsa-logo.png"/>
+        <meta name="description" content="DSA practice and examples application"/>
+      </head>
+      {/* <body className={inter.className}>{children}</body> */}
+      <RecoidContextProvider>
+
+
+      <ToastContainer/>
+
+        {children}</RecoidContextProvider>
     </html>
   );
 }
