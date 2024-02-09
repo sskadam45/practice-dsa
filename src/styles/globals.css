@@ -40,13 +40,13 @@ body {
 }
 
 /* CODE EDITOR*/
-/* .cm-scroller,
+.cm-scroller,
 .cm-gutters {
 	background-color: #282828 !important;
 }
 .cm-focused {
 	outline: none !important;
-} */
+}
 
 .split {
 	display: flex;
